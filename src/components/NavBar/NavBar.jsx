@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import * as userService from '../../utilities/users-service';
 
-// Not destructuring props this time
+// we are not doing destructing below and using props instead so we can see the old school way. 
 export default function NavBar(props) {
   function handleLogOut() {
     userService.logOut();
@@ -10,11 +10,23 @@ export default function NavBar(props) {
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
-      &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
-      &nbsp;&nbsp;<span>Welcome, {props.user.name}</span>
-      &nbsp;&nbsp;<Link onClick={handleLogOut} to="">Log Out</Link>
+      {
+        props.user ?
+          <div className="history-and-logout">
+            <div></div>
+            <span>Welcome {props.user.name}</span>
+            <div className="history-logout-icon">
+              <Link to="/orders"><i class="fas fa-history"></i></Link>
+              <Link onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
+            </div>
+          </div>
+          :
+          <div className="signup-login">
+            <Link to="/signup"><i class="fas fa-user-plus"></i></Link>
+            &nbsp;&nbsp;   &nbsp;&nbsp; <Link to="/login"><i class="fas fa-sign-in-alt"></i></Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;<Link><i class="fas fa-shopping-cart"></i></Link>
+          </div>
+      }
     </nav>
   );
 }
