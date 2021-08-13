@@ -17,13 +17,14 @@ const Service = require('./models/service');
 
   await Service.deleteMany({});
   const services = await Service.create([
-    {name: 'Flatbed', category: categories[0], price: 55},
-    {name: 'Wheellift', category: categories[0], price: 55},
-    {name: 'Winch Backwards', category: categories[0], price: 100},
-    {name: 'Winch', category: categories[1], price: 80},
-    {name: 'Tire Change w/spare', category: categories[1], price: 40},
-    {name: 'Battery Charge', category: categories[1], price: 35},
-    {name: 'Lockout', category: categories[2], price: 45},
+    {name: 'Flatbed Load', price: 55},
+    {name: 'Wheellift', price: 55},
+    {name: 'Tow/Mile', price: 5},
+    {name: 'Winch Backwards', price: 100},
+    {name: 'Winch', price: 80},
+    {name: 'Tire Change w/spare', price: 40},
+    {name: 'Battery Charge', price: 35},
+    {name: 'Lockout', price: 45},
   ]);
 
   console.log(services)
