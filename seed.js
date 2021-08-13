@@ -15,8 +15,8 @@ const Item = require('./models/service');
     {name: 'Lockout', sortOrder: 50},
   ]);
 
-  await Item.deleteMany({});
-  const items = await Service.create([
+  await Service.deleteMany({});
+  const services = await Service.create([
     {name: 'Flatbed', category: categories[0], price: 55},
     {name: 'Wheellift', category: categories[0], price: 55},
     {name: 'Winch Backwards', category: categories[0], price: 100},
