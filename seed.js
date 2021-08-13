@@ -6,14 +6,14 @@ const Service = require('./models/service');
 
 (async function() {
 
-  await Category.deleteMany({});
-  const categories = await Category.create([
-    {name: 'Tow', sortOrder: 10},
-    {name: 'Winch', sortOrder: 20},
-    {name: 'Tire Change', sortOrder: 30},
-    {name: 'Battery Charge', sortOrder: 40},
-    {name: 'Lockout', sortOrder: 50},
-  ]);
+//   await Category.deleteMany({});
+//   const categories = await Category.create([
+//     {name: 'Tow', sortOrder: 10},
+//     {name: 'Winch', sortOrder: 20},
+//     {name: 'Tire Change', sortOrder: 30},
+//     {name: 'Battery Charge', sortOrder: 40},
+//     {name: 'Lockout', sortOrder: 50},
+//   ]);
 
   await Service.deleteMany({});
   const services = await Service.create([
@@ -26,7 +26,7 @@ const Service = require('./models/service');
     {name: 'Lockout', category: categories[2], price: 45},
   ]);
 
-  console.log(items)
+  console.log(services)
 
   process.exit();
 
