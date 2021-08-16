@@ -16,7 +16,7 @@ export default function NavBar(props) {
             <div></div>
             <span>Welcome {props.user.name}</span>
             <div className="history-logout-icon">
-              <Link to="/orders"><i class="fas fa-history"></i></Link>
+              <Link to="/services"><i class="fas fa-history"></i>Services</Link>
               <Link onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
             </div>
           </div>

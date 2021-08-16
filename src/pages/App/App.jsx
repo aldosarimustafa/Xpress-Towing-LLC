@@ -9,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import ServiceListPage from '../ServiceListPage/ServiceListPage';
+import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -25,11 +26,11 @@ export default function App() {
           <Route /* exact */ path="/orders/new">
             <NewOrderPage />
           </Route>
-          <Route /* exact */ path="/services">
+          <Route exact  path="/services">
             <ServiceListPage />
           </Route>
           <Route exact path="/services/:id">
-            <ServiceListPage />
+            <ServiceDetailPage />
           </Route>
           <Route /* exact */ path="/orders">
             <OrderHistoryPage />

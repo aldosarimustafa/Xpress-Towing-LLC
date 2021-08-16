@@ -18,11 +18,10 @@ export default function ServiceListPage() {
             <h1>Choose Service</h1>
             <ul>
                 {services.map((service) =>
-                    <li services={service._id}>
-                        <Link to={`../../models/service/${service._id}`}>
+                    <li>
+                        <Link to={`/services/${service._id}`}>
                             {service.name}
                         </Link>
-                        {service._id === service.id}
                     </li>
                 )}
             </ul>
