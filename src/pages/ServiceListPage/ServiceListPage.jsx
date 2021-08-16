@@ -8,6 +8,7 @@ export default function ServiceListPage() {
     useEffect(function () {
         async function getServices() {
             const services = await servicesAPI.getAll();
+            console.log(services);
             setServices(services);
         }
         getServices();

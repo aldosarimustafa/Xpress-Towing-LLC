@@ -28,6 +28,9 @@ export default function App() {
           <Route /* exact */ path="/services">
             <ServiceListPage />
           </Route>
+          <Route exact path="/services/:id">
+            <ServiceListPage />
+          </Route>
           <Route /* exact */ path="/orders">
             <OrderHistoryPage />
           </Route>
@@ -37,7 +40,7 @@ export default function App() {
           <Route exact path="/login">
             <LoginForm setUser={setUser} />
           </Route>
-          <Redirect to="/" />
+          <Redirect to="/services" />
         </Switch>
       </>
 

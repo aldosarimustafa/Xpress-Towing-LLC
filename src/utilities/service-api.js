@@ -1,6 +1,6 @@
 import sendRequest from './send-request';
 
-const BASE_URL = '/api/service';
+const BASE_URL = '/api/services';
 
 export function createService(serviceData) {
     return sendRequest(BASE_URL, 'POST', serviceData);
