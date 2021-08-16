@@ -8,6 +8,7 @@ import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
+import ServiceListPage from '../ServiceListPage/ServiceListPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -23,6 +24,9 @@ export default function App() {
         <Switch>
           <Route /* exact */ path="/orders/new">
             <NewOrderPage />
+          </Route>
+          <Route /* exact */ path="/services">
+            <ServiceListPage />
           </Route>
           <Route /* exact */ path="/orders">
             <OrderHistoryPage />

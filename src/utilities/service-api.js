@@ -1,4 +1,4 @@
-import sendRequest from './send-requests';
+import sendRequest from './send-request';
 
 const BASE_URL = '/api/service';
 

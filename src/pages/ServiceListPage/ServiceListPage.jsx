@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import * as servicesAPI from '../../utilities/service-api'
 
 export default function ServiceListPage() {
-    const [services, setServices] = useState([]); 
+    const [services, setServices] = useState([]);
 
     useEffect(function () {
         async function getServices() {
@@ -12,16 +13,15 @@ export default function ServiceListPage() {
         getServices();
     }, [])
     return (
-        <div className="ServiceListPage">          // Page level components should have a div and a class
+        <div className="ServiceListPage">
             <h1>Choose Service</h1>
             <ul>
                 {services.map((service) =>
-                    <li services={service._id}>       // won't work - li doesn't know anything about what a serviceItem is
-                                                         // render a custom ServiceItem component
+                    <li services={service._id}>
                         <Link to={`../../models/service/${service._id}`}>
                             {service.name}
                         </Link>
-                        {serviceItem._id === service.id}
+                        {service._id === service.id}
                     </li>
                 )}
             </ul>
