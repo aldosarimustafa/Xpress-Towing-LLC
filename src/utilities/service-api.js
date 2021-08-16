@@ -10,7 +10,7 @@ export function getOne(serviceId) {
     return sendRequest(`${BASE_URL}/${serviceId}`);
 }
 
-export function sendservice(serviceId, service) {
+export function sendService(serviceId, service) {
     console.log(serviceId, service);
     return sendRequest(`${BASE_URL}/${serviceId}/send`, 'POST', service);
 }
