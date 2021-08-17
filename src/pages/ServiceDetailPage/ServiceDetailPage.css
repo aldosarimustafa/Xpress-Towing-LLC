@@ -1,3 +1,9 @@
+.ServiceDetailPage {
+    margin: 50px;
+    font-size: large;
+}
+
 .ServiceDetailPage button {
     background-color: blue;
+    margin: 10px;
 }

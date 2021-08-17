@@ -21,8 +21,8 @@ export default function ServiceListPage() {
                 {services.map((service) =>
                     <li>
                         <Link to={`/services/${service._id}`}>
-                            {service.name}
-                            {service.icon}
+                            {service.name}<br></br>
+                            <i className= {service.icon}></i>
                         </Link>
                     </li>
                 )}

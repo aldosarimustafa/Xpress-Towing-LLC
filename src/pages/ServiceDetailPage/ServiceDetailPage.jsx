@@ -25,9 +25,9 @@ export default function ServiceDetailPage() {
 
     return (
         <div class="ServiceDetailPage">
-            {service.name}
+            {service.name}<br></br>
             ${service.price.toFixed(2)}
-
+            <br></br>
             <button onClick={handleNewOrder}>Add Service <i class="fas fa-cart-plus"></i></button>
 
         </div>
