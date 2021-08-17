@@ -2,7 +2,7 @@ const Schema = require('mongoose').Schema;
 
 const serviceSchema = new Schema({
   name: { type: String, required: true },
-//   category: { type: Schema.Types.ObjectId, ref: 'Category'},
+  icon: { type: String},
   price: { type: Number, required: true, default: 0 }
 }, {
   timestamps: true

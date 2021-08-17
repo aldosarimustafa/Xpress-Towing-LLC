@@ -7,7 +7,8 @@ module.exports = {
   index,
   show,
   addServiceToCart,
-  getCart
+  getCart,
+  checkout
 };
 
 async function index(req, res) {
@@ -29,3 +30,11 @@ async function getCart(req, res) {
     const cart = await Order.getCart(req.user._id);
     res.json(cart);
 }
+
+async function checkout(req, res) {
+    const cart = await Order.getCart(req.user._id);
+    cart.isPaid = true;
+    await cart.save();
+    res.json(cart);
+}
+

@@ -7,5 +7,6 @@ router.get('/', servicesCtrl.index);
 router.get('/cart', servicesCtrl.getCart);
 router.get('/:id', servicesCtrl.show);
 router.put('/add/:serviceId', servicesCtrl.addServiceToCart);
+router.post('/checkout', servicesCtrl.checkout);
 
 module.exports = router;

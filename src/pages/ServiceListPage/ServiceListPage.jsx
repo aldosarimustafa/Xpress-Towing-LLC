@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as servicesAPI from '../../utilities/service-api'
+import './ServiceListPage.css'
 
 export default function ServiceListPage() {
     const [services, setServices] = useState([]);
@@ -21,6 +22,7 @@ export default function ServiceListPage() {
                     <li>
                         <Link to={`/services/${service._id}`}>
                             {service.name}
+                            {service.icon}
                         </Link>
                     </li>
                 )}

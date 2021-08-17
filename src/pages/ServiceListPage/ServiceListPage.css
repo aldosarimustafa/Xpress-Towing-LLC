@@ -1,0 +1,8 @@
+.ServiceListPage ul {
+    padding: 0;
+    list-style: none;
+}
+
+.ServiceListPage li {
+    margin: 10px;
+}

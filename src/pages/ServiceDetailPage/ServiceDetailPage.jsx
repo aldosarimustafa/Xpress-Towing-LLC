@@ -28,7 +28,7 @@ export default function ServiceDetailPage() {
             {service.name}
             ${service.price.toFixed(2)}
 
-            <button onClick={handleNewOrder}>Select Service</button>
+            <button onClick={handleNewOrder}>Add Service <i class="fas fa-cart-plus"></i></button>
 
         </div>
     )

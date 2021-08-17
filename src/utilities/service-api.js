@@ -23,6 +23,10 @@ export function getAll() {
     return sendRequest(BASE_URL);
 }
 
+export function checkout() {
+    return sendRequest(`${BASE_URL}/checkout`, 'POST');
+}
+
 export function getCart() {
     return sendRequest(`${BASE_URL}/cart`);
 }

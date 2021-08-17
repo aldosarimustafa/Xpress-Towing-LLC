@@ -1,0 +1,9 @@
+.history-and-logout span {
+    margin: 10px;
+}
+
+.history-logout-icon {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
