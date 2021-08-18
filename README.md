@@ -10,6 +10,9 @@
 * CSS
 * HTML
 * Heroku
+* Trello
+---
+## Trello Link: https://trello.com/b/rWizAlOp/project-4-planning
 ---
 ## Screenshots:
 <img src="https://imgur.com/xPXr0cc.png">
