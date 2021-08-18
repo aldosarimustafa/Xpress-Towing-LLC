@@ -22,7 +22,8 @@ export default function ServiceListPage() {
                     <li>
                         <Link to={`/services/${service._id}`}>
                             {service.name}<br></br>
-                            <i className= {service.icon}></i>
+                            <i className= {service.icon}></i><br></br>
+                            ${service.price.toFixed(2)}
                         </Link>
                     </li>
                 )}
